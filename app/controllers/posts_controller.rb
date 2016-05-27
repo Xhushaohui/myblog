@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 			redirect_to @post,notice: "OK"
 		else
 			render 'new', notice: "Oh,No!"
+
 		end
 			
 	end
@@ -24,3 +25,4 @@ class PostsController < ApplicationController
 		params.require (:post).permit(:title, :content)
 	end
 end
+
