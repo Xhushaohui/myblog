@@ -1,25 +1,26 @@
 <%= form_for @post do |f| %>
+
 	<% if @post.errors.any? %>
-		<h2><%= pluralize(@post.errors.count, "error") %></h2>
+		<h2> <% pluralize(@post.errors.count, "error") %> prevent this post from saving: </h2>
 		<ul>
 			<% @post.errors.full_message.each do |msg| %>
-			<li><%= msg %></li>
+			<li> <%= msg %></li>
 			<% end %>
 		</ul>
 	<% end %>
-
-	<%= f.label :title %> <br>
+		
+	
+	<%=	f.label :title %> <br>
 	<%= f.text_field :title %>
 	<br>
 	<br>
 
-	<%= f.label :content, "write your article here" %> <br>
+	<%= f.label :content, "Write your content here" %> <br>
 	<%= f.text_area :content %>
-	<br>
-	<br>
 
-	<%= f.submit %>	
+	<br>
+	<br>
+	<%= f.submit %>
+
 
 <% end %>
-
-　  　
