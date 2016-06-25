@@ -6,11 +6,9 @@
 		</header>
 
 		<div class="content">
-		<%= @post.content %>
+		<%= markdown @post.content %>
 		</div>
 	<hr>
 	</div>
 
-<br>
-<br>
-
+<%= link_to "Edit", edit_post_path(@post) %>
