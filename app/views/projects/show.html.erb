@@ -1,0 +1,19 @@
+<div id="post_show_conten" class="skinny_wrapper wrapper_padding">
+		<header>
+			<p class="date"><%= @project.created_at.strftime("%A,%B %d") %></p>
+			<h1><%= @project.title %></h1>
+			<hr>
+		</header>
+
+		<div class="description">
+		<%= markdown @project.description %>
+		<div class="button_wrapper">
+					<a href="<%= @project.link %>" class = "project_button" target = "_blank"> Visit <%= @project.title %></a>
+		</div>
+
+		</div>
+	<hr>
+	<%= render 'disqus' %>
+	</div>
+
+<%= link_to "Edit", edit_project_path(@project) %>
