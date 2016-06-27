@@ -8,8 +8,9 @@
 		<div class="content">
 		<%= markdown @post.content %>
 		</div>
+
+  <%= link_to "Edit", edit_post_path(@post) %>
 	<hr>
 	<%= render 'disqus' %>
 	</div>
 
-<%= link_to "Edit", edit_post_path(@post) %>
